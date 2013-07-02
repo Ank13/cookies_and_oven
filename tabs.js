@@ -1,14 +1,13 @@
 ////////// MODELS  ///////
 
 var Oven = { 
-   contents : this.contents = [] ,
-
+   contents : [],
    addFood : function(food){
-      contents.push(food) ;
+      this.contents.push(food) ;
    },
    bake : function(){
       for (var i = 0; i < this.contents.length; i++) {
-         contents[i].actualTime += 1;
+         this.contents[i].actualTime += 1;
       }
    }
 };
@@ -20,15 +19,12 @@ function Cookie(){
 };
 
 Cookie.prototype = {
-
    cookieType : function(flavor){
       this.flavor = flavor ;
    },
-
    bakeTime : function(time){
       this.neededTime = time ;
    }
-
 };
 
 Cookie.prototype.status = function(){
@@ -57,7 +53,7 @@ Oven.bake();
 Oven.bake();
 Oven.bake();
 console.log(sugar.status());
-console.log(Oven.contents);
+// console.log(Oven.contents);
 
 
 ///// CONTROLLER ///////////////
